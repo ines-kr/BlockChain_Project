@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.2",
+    "truffle": "^5.6.8",
+    "truffle-hdwallet-provider": "^0.0.3"
+  },
+  "name": "blockchain",
+  "description": "<p align=\"center\">   <img width=\"100%\"  src=\"https://github.com/GeekyAnts/sample-decentralised-kyc-ethereum/blob/main/assets/1.png?raw=true\"> </p>",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
