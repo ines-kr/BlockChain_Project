@@ -315,11 +315,7 @@ export function useApi() {
       return res;
     } catch (error) {
       console.log(error);
-      if (error === "Bank is inactive") {
-        toastError("Bank is inactive");
-      } else {
-        toastError("Failed to authenticate the metamask user!");
-      }
+     
     }
   }, []);
 

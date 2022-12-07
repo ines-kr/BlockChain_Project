@@ -23,10 +23,10 @@ export function Header() {
       zIndex={10}>
       <Pressable onPress={() => navigate("/")}>
         <Image
-          size={{ base: "90", md: "130" }}
+          size={{ base: "90", md: "60" }}
           resizeMode={"contain"}
           source={{
-            uri: "https://kyc-chain.com/wp-content/uploads/2019/07/logo.svg",
+            uri: "https://upload.wikimedia.org/wikipedia/fr/7/74/Logo_biat_2019.jpg",
           }}
           alt="Logo"
         />

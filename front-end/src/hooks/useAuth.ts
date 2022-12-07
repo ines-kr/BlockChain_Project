@@ -23,6 +23,7 @@ export function useAuth() {
         toastError("Please install MetaMask first.");
         return;
       }
+      
       if (!web3) {
         try {
           await (window as any).ethereum.enable();
@@ -39,6 +40,7 @@ export function useAuth() {
         console.log("Connected", accounts[0]);
         localStorage.setItem("walletAddress", accounts[0]);
         const publicAddress = accounts[0];
+        window.location.reload();
         if (publicAddress !== "") {
           const data = await getUserDetails();
           console.log(data);
@@ -71,7 +73,7 @@ export function useAuth() {
       if (!web3) {
         web3 = new Web3((window as any).ethereum);
         const accounts = await web3?.eth.getAccounts();
-        if (accounts.length !== 0) {
+        
           const data = await getUserDetails();
           if (data) {
             dispatch(
@@ -87,7 +89,7 @@ export function useAuth() {
             dispatch(setLoading(false));
             navigate((state.state as any)?.from || "/");
           }
-        }
+        
       }
     } catch (e) {
       console.log(e);
